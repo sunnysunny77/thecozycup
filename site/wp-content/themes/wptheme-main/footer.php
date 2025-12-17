@@ -24,14 +24,7 @@
 
                     if (function_exists('the_custom_logo')) {
 
-                        ?>
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo">
-
-                                <?php the_custom_logo(); ?>
-
-                            </a>
-
-                        <?php
+                        the_custom_logo(); 
 
                     }
 
