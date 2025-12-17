@@ -1,0 +1,170 @@
+.template {
+    font-size: 16px;
+    color: $delta;
+    h1 {
+        color: $charlie;
+    }
+    h2 a {
+        color: $black;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: inline-block;
+    }
+    .content p {
+        margin-bottom: 1rem;
+    }
+    .content {
+        color: $bravo;
+    }
+    a {
+        color: $charlie;
+    }
+    img {
+        border-radius: 50%;
+        border: 3px solid $bravo;
+        margin: 2rem 0 2rem 5%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        max-width: 150px;
+        @include sm {
+            margin: 1rem 0 2rem 5%;
+        }
+    }
+}
+
+// comments
+
+.comment-form {
+    color: $black;
+    font-size: clamp(18px, 2vw, 22px);
+    .form-allowed-tags,
+    .alert-info {
+        color: $delta;
+        margin: 0 0 20px 0;
+        font-size: 16px;
+    }
+    #commentsubmit {
+        color: $alpha;
+        border: none;
+        background-color: $bravo;
+        border-radius: 15px;
+        padding: 5px 15px;
+        margin: 20px 0 0 0;
+        width: fit-content;
+    }
+    input,
+    label,
+    .comment-form-cookies {
+        width: 66%;
+        margin: 0;
+        display: block;
+        @include sm {
+            width: 100%;
+        }
+    }
+    .t-area-label,
+    textarea {
+        width: 100%;
+    }
+    label {
+        display: block;
+        font-size: 16px;
+    }
+    textarea,
+    input {
+        resize: none;
+        margin: 5px 0 10px 0;
+        border-radius: 5px;
+        padding: 5px;
+        border-color: $delta;
+        outline: none;
+        border: 1px solid;
+    }
+    input[type="checkbox"],
+    .comment-form-cookies label {
+        width: fit-content;
+        margin: 10px 0 0 0;
+        font-size: 16px;
+    }
+    .required {
+        color: $charlie;
+        font-size: 25px;
+    }
+    p,
+    .r-feilds,
+    .r-feilds .required,
+    .required-field-message .required {
+        color: $delta;
+        font-size: 16px;
+    }
+    .required-field-messag,
+    .logged-in-as a {
+        display: block;
+    }
+}
+
+.comment-reply-title {
+    color: $black;
+    margin: 1rem 0;
+}
+
+.comment-list {
+    ul,
+    li {
+        width: 100%;
+        display: block;
+    }
+    .comment-heading {
+        color: $delta;
+    }
+    .comment-content {
+        color: $black;
+    }
+}
+
+// search
+
+button[type="submit"].wp-block-search__button,
+.wp-block-search__input,
+.search-form input[type="submit"].search-submit,
+.search-form .search-field {
+    background-color: transparent;
+    color: $charlie;
+    border-radius: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.wp-block-search__input,
+.search-form .search-field {
+    border: 1px solid $charlie;
+    color: $black;
+    outline: none;
+}
+
+.wp-block-search__button,
+.search-form input[type="submit"].search-submit {
+    border-top: 1px solid $charlie;
+    border-right: 1px solid $charlie;
+    border-bottom: 1px solid $charlie;
+    border-left: none;
+}
+
+.wp-block-search__label {
+    text-align: right;
+    width: 100%;
+    display: none;
+}
+
+.wp-block-search__button-outside,
+.search-form {
+    margin: 0.25rem 0;
+}
+
+.search-form {
+    width: fit-content;
+    display: flex;
+}

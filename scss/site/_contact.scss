@@ -1,0 +1,64 @@
+#contact_form {
+    font-size: clamp(18px, 2vw, 22px);
+    color: $black;
+    background-color: $echo;
+    height: 100%;
+    legend {
+        color: $alpha;
+        background-color: $black;
+        border-bottom-left-radius: 5px;
+    }
+    textarea,
+    input {
+        resize: none;
+        margin: 5px 0 10px 0;
+        border-radius: 5px;
+        padding: 5px;
+        border-color: $delta;
+        outline: none;
+        border: 0;
+        font-size: 16px;
+    }
+    label {
+      color: $alpha;
+      font-size: 17px;
+    }
+    input[type="submit"] {
+        color: $alpha;
+        border: none;
+        background-color: $black;
+        border-radius: 15px;
+        padding: 5px 15px;
+        margin: 0;
+        width: fit-content;
+        font-weight: inherit;
+        font-size: 16px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 5px;
+        width: 100px;
+        @include md {
+            width: 100%;
+            border-top-left-radius: 0;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    #response {
+        height: 30px;
+        font-size: 15px;
+        color: $alpha;
+    }
+}
+
+.contact-heading {
+    color: $charlie;
+}
+
+.tel,
+.email {
+    color: $alpha;
+    font-size: 15px;
+}
