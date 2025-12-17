@@ -121,11 +121,23 @@ function boot_on_theme_activation()
     if (!get_post_status(256)) {
         $page = array(
             'import_id'      =>  256,
-            'post_title'     => 'Example',
+            'post_title'     => 'Products',
             'post_type'      => 'page',
-            'post_name'      => 'Example',
+            'post_name'      => 'products',
             'post_status'    => 'publish',
-            'page_template'  => 'page-example.php',
+            'page_template'  => 'page-product.php',
+        );
+        $id = wp_insert_post($page);
+    }
+
+    if (!get_post_status(259)) {
+        $page = array(
+            'import_id'      =>  259,
+            'post_title'     => 'Contact',
+            'post_type'      => 'page',
+            'post_name'      => 'contact',
+            'post_status'    => 'publish',
+            'page_template'  => 'page-contact.php',
         );
         $id = wp_insert_post($page);
     }

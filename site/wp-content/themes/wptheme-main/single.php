@@ -50,8 +50,8 @@
 
                                         <?php previous_post_link('%link', 'Previous'); ?>
 
-
                                     </div>
+
                                 <?php } ?>
 
                                 <?php if (get_previous_post_link() && get_next_post_link()) { ?>
