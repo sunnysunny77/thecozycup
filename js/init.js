@@ -2,7 +2,7 @@ import { OverlayScrollbars } from "overlayscrollbars";
 
 const overlay = () => {
 
-  window.osInst = OverlayScrollbars(document.body, {
+  OverlayScrollbars(document.body, {
     overflow: {
       x: "hidden",
       y: "scroll",
