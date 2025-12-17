@@ -26,6 +26,11 @@ h2 {
     font-size: clamp(17px, 2vw, 20px);
 }
 
+#site {
+  height: 100vh;
+  overflow: auto;
+}
+
 // scrollbar
 
 .os-theme-body {

@@ -140,3 +140,48 @@ function boot_favicon(){
     echo "<link rel='shortcut icon' href='" . get_stylesheet_directory_uri() . "/favicon.ico' />" . "\n";
 }
 add_action( 'wp_head', 'boot_favicon');
+
+function sync_acf_title_with_post_title( $post_id ) {
+    if ( get_post_type( $post_id ) !== 'products' ) {
+        return;
+    }
+
+    remove_action( 'save_post', 'sync_acf_title_with_post_title' );
+
+    $post_title = get_the_title( $post_id );
+    update_field( 'title', $post_title, $post_id );
+
+    add_action( 'save_post', 'sync_acf_title_with_post_title' );
+}
+add_action( 'save_post', 'sync_acf_title_with_post_title' );
+
+function sync_post_title_with_acf_title( $post_id ) {
+    if ( get_post_type( $post_id ) !== 'products' ) {
+        return;
+    }
+
+    $acf_title = get_field( 'title', $post_id );
+    if ( $acf_title ) {
+        remove_action( 'acf/save_post', 'sync_post_title_with_acf_title' );
+
+        wp_update_post([
+            'ID'         => $post_id,
+            'post_title' => $acf_title,
+        ]);
+
+        add_action( 'acf/save_post', 'sync_post_title_with_acf_title', 20 );
+    }
+}
+add_action( 'acf/save_post', 'sync_post_title_with_acf_title', 20 );
+
+function add_defer_attribute($tag, $handle, $src) {
+
+    $defer_scripts = array('app-scripts', 'preload-script', 'pwa-service-worker');
+
+    if (in_array($handle, $defer_scripts)) {
+        return '<script src="' . esc_url($src) . '" defer></script>';
+    }
+
+    return $tag;
+}
+add_filter('script_loader_tag', 'add_defer_attribute', 10, 3);
