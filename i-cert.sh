@@ -39,7 +39,7 @@ subjectAltName = @alt_names\n\
 [ alt_names ]\n\
 DNS.1 = ${CN}\n\
 DNS.2 = localhost\n\
-IP.1 = 127.0.0.1"> "${INIT_CWD}D/conf/csr.conf"
+IP.1 = 127.0.0.1"> "${INIT_CWD}/conf/csr.conf"
  
 echo -e "authorityKeyIdentifier=keyid,issuer\n\
 basicConstraints=CA:FALSE\n\
