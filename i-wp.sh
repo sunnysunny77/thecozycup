@@ -13,7 +13,9 @@ vendor/bin/wp config create \
   --dbuser="${DBUSER}" \
   --dbpass="${DBPASS}" \
   --path=site \
-  --extra-php='$_SERVER["HTTPS"]="on";' || true
+  --extra-php <<PHP
+\$_SERVER['HTTPS'] = 'on';
+PHP
 
 vendor/bin/wp db create --path=site || true
 
