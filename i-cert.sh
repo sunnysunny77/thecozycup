@@ -94,5 +94,3 @@ npm run trust-cert
 echo "Trust hosts"
 
 npm run trust-hosts
-
-echo "Certificate detected, deleted all files in conf and certs folders";
