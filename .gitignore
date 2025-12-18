@@ -13,7 +13,10 @@
 /conf/ca.conf
 /site/*
 !/site/wp-content/
+site/wp-content/*
 !/site/wp-content/themes/
-!/site/wp-content/themes/wptheme-main
+site/wp-content/themes/*
+!/site/wp-content/themes/wptheme-main/
+!/site/wp-content/themes/wptheme-main/**
 /trust-hosts.ps1
 /wptheme.zip
