@@ -69,11 +69,17 @@
 
                     <?php } ?>
 
-                    <?php if ($image) { ?>
+                    <?php if ($image) {
 
-                        <img src="<?php echo $image["url"]; ?>" alt="<?php echo $image["alt"]; ?>" />
 
-                    <?php } ?>
+                        echo wp_get_attachment_image(
+                            $image['ID'],
+                            'medium',
+                            false,
+                            ['alt' => $image['alt']]
+                        );
+
+                    } ?>
                     
                     <span class="d-block pb-7 content">
 

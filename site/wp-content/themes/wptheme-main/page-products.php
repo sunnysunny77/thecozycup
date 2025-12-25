@@ -39,7 +39,16 @@ wp_reset_query();
 
                                 <div class="product-image">
 
-                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                                    <?php
+
+                                        echo wp_get_attachment_image(
+                                            $image['ID'],
+                                            'medium',
+                                            false,
+                                            ['alt' => $image['alt']]
+                                        );
+
+                                    ?>
 
                                 </div>
 
