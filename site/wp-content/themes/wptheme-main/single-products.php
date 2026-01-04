@@ -19,6 +19,7 @@
                     $description   = get_field("description");
                     $size          = get_field("size");
                     $price         = get_field("price");
+                    $post_id       = get_the_ID();
                     
                 ?>
 
@@ -40,10 +41,9 @@
 
                                     <?php previous_post_link('%link', 'Previous'); ?>
 
-
                                 </div>
-                            <?php } ?>
 
+                            <?php } ?>
 
                             <?php if (get_previous_post_link() && get_next_post_link()) { ?>
 
@@ -121,7 +121,7 @@
                 "product-form",
                 array(
                     'title' => $product_title,
-                    'price' => $price,
+                    'post_id' => $post_id,
                 ),
             );
 

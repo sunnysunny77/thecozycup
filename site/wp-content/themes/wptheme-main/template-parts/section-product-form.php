@@ -1,7 +1,7 @@
 <?php
 
     $title      = $args["title"] ?? "";
-    $price      = $args["price"] ?? "";
+    $post_id    = $args["post_id"] ?? "";
 
 ?>
 
@@ -11,7 +11,7 @@
             <?php echo $title; ?>
         </legend>
         <input type="hidden" name="title" id="title" value="<?php echo $title; ?>" />
-        <input type="hidden" name="price" id="price" value="<?php echo $price; ?>" />
+        <input type="hidden" name="post_id" id="post_id" value="<?php echo $post_id; ?>" />
         <label class="col-48 row px-6" for="quantity"><span class="d-block">Quantity:</span>
             <input class="col-48 col-xl-19" type="number" name="quantity" id="quantity" value="1" min="1" step="1" autocomplete="off" required>
         </label>

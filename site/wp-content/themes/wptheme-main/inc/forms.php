@@ -32,9 +32,10 @@ function boot_product_form()
     $to_email = $_POST["to_email"];
     $subject = $_POST["subject"];
     $title = $_POST["title"];
-    $price = $_POST["price"];
+    $post_id = $_POST["post_id"];
+    $price = get_post_meta($post_id, 'price', true);
     $quantity = $_POST["quantity"];
-    $total = $_POST["quantity"] * $_POST["price"];
+    $total = $quantity * $price;
     $address = $_REQUEST["address"];
     $name = $_REQUEST["name"];
     $email = $_REQUEST["email"];
