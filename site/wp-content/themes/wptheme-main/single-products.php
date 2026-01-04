@@ -114,8 +114,19 @@
 
         <hr class="s-p-hr"/>
 
-        <?php  get_template_part("template-parts/section", "contact-form"); ?> 
-        
+        <?php
+
+            get_template_part(
+                "template-parts/section",
+                "product-form",
+                array(
+                    'title' => $product_title,
+                    'price' => $price,
+                ),
+            );
+
+        ?>
+
         <hr class="s-p-hr"/>
 
         <?php  get_template_part("template-parts/section", "cta"); ?> 

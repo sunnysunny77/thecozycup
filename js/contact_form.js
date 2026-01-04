@@ -29,4 +29,32 @@ export const contact_form = () => {
             console.error("Error:", error.message);
         }
     });
+
+    events(document.querySelector("#product_form"), "submit", async (event) => {
+
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+        data.append( "action", "product_form" );
+        data.append( "to_email", "shlooby07@gmail.com" );
+        data.append( "subject", "New Product Message" );
+
+        try {
+
+            const response = await fetch(frontend_ajax_object.ajax_url, {
+                    method: "POST",
+                    body: data
+                }
+            );
+            if (!response.ok) {
+
+                throw new Error("Request failed with status " + response.status);
+            }
+
+            const text = await response.text();
+            document.querySelector("#response").innerHTML = text;
+        } catch (error) {
+
+            console.error("Error:", error.message);
+        }
+    });
 };
