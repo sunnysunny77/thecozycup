@@ -111,6 +111,10 @@
 .comment-reply-title {
     color: $black;
     margin: 1rem 0;
+    #cancel-comment-reply-link {
+        display: block;
+        margin: 1rem 0 0 0;
+    }
 }
 
 .comment-list {
