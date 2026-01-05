@@ -1,9 +1,1 @@
-<div class="cta">
-
-    <ul>
-
-        <?php dynamic_sidebar("widget_cta"); ?>
-
-    </ul>
-
-</div>
+<?php echo do_shortcode('[SHORTCODE_ELEMENTOR id="985"]'); ?>

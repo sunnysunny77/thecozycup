@@ -29,3 +29,5 @@ vendor/bin/wp theme install wptheme.zip --activate --path=site || true
 vendor/bin/wp plugin install elementor --activate --path=site || true
 
 vendor/bin/wp plugin install advanced-custom-fields --activate --path=site || true
+
+vendor/bin/wp plugin install shortcode-elementor --activate --path=site

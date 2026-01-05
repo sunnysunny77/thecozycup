@@ -88,8 +88,8 @@ a {
 }
 
 // buttons
-
 .elementor-button,
+.elementor-widget-button,
 button,
 .wp-block-button__link,
 input[type="submit"] {
@@ -97,16 +97,15 @@ input[type="submit"] {
     will-change: opacity;
     opacity: 1;
     .elementor-button-icon,
-    .button-icon {
+    .button-span,
+    &.elementor-element-017f7fd .elementor-button-text {
         transition: transform 0.3s;
         transform: translateX(0);
         will-change: transform;
     }
-    .button-icon {
-        display: inline-block;
-    }
     &:hover .elementor-button-icon,
-    &:hover .button-icon {
+    &:hover .button-span,
+    &:hover.elementor-element-017f7fd .elementor-button-text {
         transform: translateX(7px);
     }
     &:hover {
