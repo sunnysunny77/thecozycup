@@ -44,7 +44,7 @@
             width: 100%;
             border-top-left-radius: 0;
         }
-        &:hover .button-icon {
+        &:hover .button-span {
             transform: translateX(7px);
             @include md {
                 transform: translateX(0);
