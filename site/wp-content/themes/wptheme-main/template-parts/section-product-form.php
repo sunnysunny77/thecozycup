@@ -31,6 +31,6 @@
     <div id="response" class="d-flex justify-content-center align-self-end w-100">
     </div>
     <div class="d-flex justify-content-end align-self-end w-100">
-        <input type="submit" value="Send">
+        <button type="submit"><span class="button-icon">Send<span></button>
     </div>
 </form>

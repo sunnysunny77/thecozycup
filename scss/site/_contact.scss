@@ -21,15 +21,15 @@
         font-size: 16px;
     }
     label {
-      color: $alpha;
-      font-size: 17px;
+        color: $alpha;
+        font-size: 17px;
     }
-    input[type="submit"] {
+    button {
         color: $alpha;
         border: none;
         background-color: $black;
         border-radius: 15px;
-        padding: 5px 15px;
+        padding: 12px 15px;
         margin: 0;
         width: fit-content;
         font-weight: inherit;
@@ -38,13 +38,17 @@
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
         border-top-left-radius: 5px;
-        width: 100px;
+        width: 200px;
+        transition: opacity;
         @include md {
             width: 100%;
             border-top-left-radius: 0;
         }
-        &:hover {
-            opacity: 0.8;
+        &:hover .button-icon {
+            transform: translateX(7px);
+            @include md {
+                transform: translateX(0);
+            }
         }
     }
     #response {

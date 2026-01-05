@@ -17,7 +17,6 @@ main {
     min-height: calc(100dvh - 86px);
 }
 
-
 h1 {
     font-size: clamp(18px, 2vw, 22px);
 }
@@ -27,8 +26,8 @@ h2 {
 }
 
 #site {
-  height: 100vh;
-  overflow: auto;
+    height: 100vh;
+    overflow: auto;
 }
 
 // scrollbar
@@ -75,7 +74,7 @@ h2 {
             width: 100%;
         }
     }
-    &.current-menu-item  {
+    &.current-menu-item {
         transition: none;
         &::after {
             width: 100%;
@@ -97,12 +96,17 @@ input[type="submit"] {
     transition: opacity 0.3s;
     will-change: opacity;
     opacity: 1;
-    svg {
+    .elementor-button-icon,
+    .button-icon {
         transition: transform 0.3s;
         transform: translateX(0);
         will-change: transform;
     }
-    &:hover svg {
+    .button-icon {
+        display: inline-block;
+    }
+    &:hover .elementor-button-icon,
+    &:hover .button-icon {
         transform: translateX(7px);
     }
     &:hover {
@@ -112,6 +116,6 @@ input[type="submit"] {
 
 // color
 
-.bg-echo{
+.bg-echo {
     background-color: $echo;
 }

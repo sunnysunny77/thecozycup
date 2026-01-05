@@ -47,6 +47,8 @@
                 </ul>
 
             </div>
+
+            <div class="shapes-1"></div>
     
         </footer>
 

@@ -1,5 +1,5 @@
 .cta {
- background-color: $echo;
+    background-color: $echo;
     color: $alpha;
     padding: 3rem 3rem 0 0;
     margin-top: 2.5rem;
@@ -12,22 +12,35 @@
         }
     }
     a {
+        background-color: transparent;
+        display: block;
+        width: 100%;
+        padding: 12px 15px;
+        transition: transform 0.3s;
+        transform: translateX(0);
+        will-change: transform;
+        display: block;
+        font-size: 16px;
+        font-weight: inherit;
+        text-align: center;
+    }
+    .wp-block-button {
         display: block;
         color: $alpha;
         border: none;
         background-color: $black;
         border-radius: 0;
-        padding: 5px 15px;
         margin: 20px 0 0 0;
-        width: fit-content;
+        width: 200px;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
         border-top-left-radius: 5px0;
-        font-size: 16px;
-        font-weight: inherit;
         &:hover {
             opacity: 0.8;
+        }
+        &:hover a {
+            transform: translateX(7px);
         }
     }
     p {
